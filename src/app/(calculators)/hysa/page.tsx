@@ -54,7 +54,7 @@ export default function HYSAPage() {
       },
       options: {
         responsive: true, maintainAspectRatio: false,
-        plugins: { legend: { display: false }, tooltip: { backgroundColor: '#1f2937', titleColor: '#9ca3af', bodyColor: '#f3f4f6', padding: 9, callbacks: { label: c => '  ' + c.dataset.label + ': ' + fmtK(c.parsed.y) } } },
+        plugins: { legend: { display: false }, tooltip: { backgroundColor: '#1f2937', titleColor: '#9ca3af', bodyColor: '#f3f4f6', padding: 9, callbacks: { label: c => '  ' + c.dataset.label + ': ' + fmtK(c.parsed.y ?? 0) } } },
         scales: {
           x: { grid: { color: 'rgba(0,0,0,0.04)' }, ticks: { color: '#9ca3af', font: { family: 'DM Mono', size: 10 }, maxTicksLimit: 10 }, border: { display: false } },
           y: { grid: { color: 'rgba(0,0,0,0.04)' }, ticks: { color: '#9ca3af', font: { family: 'DM Mono', size: 10 }, callback: (v) => fmtK(Number(v)) }, border: { display: false } },
