@@ -3,8 +3,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Chart, registerables } from 'chart.js';
 import { Input, Select, SegmentedControl, Card, Stat, InfoStrip, PageHero, EduBox, EduCard, Disclaimer, SaveButton } from '@/components/ui';
-import { calcHYSAGrowth, ppy } from '@/lib/calculators';
-import { fmt, fmtK } from '@/lib/utils';
+import { calcHYSAGrowth } from '@/lib/calculators';
+import { fmt, fmtK, ppy } from '@/lib/utils';
 import { useSaveCalculation } from '@/hooks/useSaveCalculation';
 
 Chart.register(...registerables);
