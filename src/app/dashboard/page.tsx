@@ -55,7 +55,7 @@ export default async function DashboardPage() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
-          {Object.entries(grouped).map(([type, items]) => {
+          {(Object.entries(grouped) as [string, SavedCalculation[]][]).map(([type, items]) => {
             const meta = calcMeta[type];
             return (
               <div key={type} className="bg-white border border-[var(--border)] rounded-[10px] p-4 shadow-[var(--sh)]">
