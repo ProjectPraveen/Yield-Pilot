@@ -33,7 +33,7 @@ export default function HomePage() {
             Try HYSA Calculator
           </Link>
           <Link href="/sign-up" className="inline-flex items-center text-[13px] font-medium text-[var(--text2)] border border-[var(--border2)] px-5 py-2.5 rounded-[7px] hover:text-[var(--text)] hover:border-[var(--text2)] transition-colors">
-            Create Free Account
+            Create Account
           </Link>
         </div>
       </div>

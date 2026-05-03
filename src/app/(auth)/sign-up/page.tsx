@@ -54,7 +54,7 @@ export default function SignUpPage() {
     <div className="max-w-[380px] mx-auto px-6 py-14">
       <div className="bg-white border border-[var(--border)] rounded-[14px] p-8 shadow-[var(--sh-md)]">
         <h1 className="text-[20px] font-bold tracking-[-0.02em] mb-1">Create account</h1>
-        <p className="text-[12px] text-[var(--text2)] mb-5">Free forever. Save calculations and track progress.</p>
+        <p className="text-[12px] text-[var(--text2)] mb-5">Save calculations and track your progress over time.</p>
 
         {success ? (
           <div className="bg-[var(--accent-dim)] border border-[var(--accent-line)] rounded-[7px] p-3 text-[12px] text-[var(--accent-h)] font-medium">

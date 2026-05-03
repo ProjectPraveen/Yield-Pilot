@@ -88,12 +88,13 @@ export function amortizeLoan(principal: number, annualRate: number, months: numb
 
 // ─── INCOME TAX ───────────────────────────────────────────────
 const TX2024 = {
-  single:  [{ limit: 11600, rate: 0.10 }, { limit: 47150, rate: 0.12 }, { limit: 100525, rate: 0.22 }, { limit: 191950, rate: 0.24 }, { limit: 243725, rate: 0.32 }, { limit: 609350, rate: 0.35 }, { limit: Infinity, rate: 0.37 }],
-  married: [{ limit: 23200, rate: 0.10 }, { limit: 94300, rate: 0.12 }, { limit: 201050, rate: 0.22 }, { limit: 383900, rate: 0.24 }, { limit: 487450, rate: 0.32 }, { limit: 731200, rate: 0.35 }, { limit: Infinity, rate: 0.37 }],
-  hoh:     [{ limit: 16550, rate: 0.10 }, { limit: 63100, rate: 0.12 }, { limit: 100500, rate: 0.22 }, { limit: 191950, rate: 0.24 }, { limit: 243700, rate: 0.32 }, { limit: 609350, rate: 0.35 }, { limit: Infinity, rate: 0.37 }],
+  single:    [{ limit: 11600,   rate: 0.10 }, { limit: 47150,  rate: 0.12 }, { limit: 100525, rate: 0.22 }, { limit: 191950, rate: 0.24 }, { limit: 243725, rate: 0.32 }, { limit: 609350, rate: 0.35 }, { limit: Infinity, rate: 0.37 }],
+  married:   [{ limit: 23200,   rate: 0.10 }, { limit: 94300,  rate: 0.12 }, { limit: 201050, rate: 0.22 }, { limit: 383900, rate: 0.24 }, { limit: 487450, rate: 0.32 }, { limit: 731200, rate: 0.35 }, { limit: Infinity, rate: 0.37 }],
+  marriedSep:[{ limit: 11600,   rate: 0.10 }, { limit: 47150,  rate: 0.12 }, { limit: 100525, rate: 0.22 }, { limit: 191950, rate: 0.24 }, { limit: 243725, rate: 0.32 }, { limit: 365600, rate: 0.35 }, { limit: Infinity, rate: 0.37 }],
+  hoh:       [{ limit: 16550,   rate: 0.10 }, { limit: 63100,  rate: 0.12 }, { limit: 100500, rate: 0.22 }, { limit: 191950, rate: 0.24 }, { limit: 243700, rate: 0.32 }, { limit: 609350, rate: 0.35 }, { limit: Infinity, rate: 0.37 }],
 };
-export const STD_DEDUCTION = { single: 14600, married: 29200, hoh: 21900 };
-export type FilingStatus = 'single' | 'married' | 'hoh';
+export const STD_DEDUCTION = { single: 14600, married: 29200, marriedSep: 14600, hoh: 21900 };
+export type FilingStatus = 'single' | 'married' | 'marriedSep' | 'hoh';
 
 export function calcIncomeTax(income: number, status: FilingStatus, deduction: number, preTax: number) {
   const taxable = Math.max(0, income - preTax - deduction);

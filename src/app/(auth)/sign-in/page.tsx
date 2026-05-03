@@ -63,7 +63,7 @@ export default function SignInPage() {
 
         <p className="text-center text-[12px] text-[var(--text2)] mt-4">
           No account?{' '}
-          <Link href="/sign-up" className="text-[var(--accent)] font-semibold hover:underline">Sign up free</Link>
+          <Link href="/sign-up" className="text-[var(--accent)] font-semibold hover:underline">Sign up</Link>
         </p>
       </div>
     </div>
